@@ -1,306 +1,329 @@
 <!-- Work.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work Experience</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 22px 16px 64px;
-      font-family: "Kumbh Sans", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 22px 16px 64px;
+            font-family: "Kumbh Sans", sans-serif;
+        }
 
-    .toplink {
-      margin: 18px 0 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
+        .toplink {
+            margin: 18px 0 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
 
-    .pill {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.10);
-      padding: 8px 12px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
+        .pill {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(0, 0, 0, 0.10);
+            padding: 8px 12px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
 
-    .pill:hover {
-      border-color: rgba(255,255,255,0.40);
-      background: rgba(0,0,0,0.18);
-    }
+        .pill:hover {
+            border-color: rgba(255, 255, 255, 0.40);
+            background: rgba(0, 0, 0, 0.18);
+        }
 
-    /* More obvious primary CV button */
-    .pill--primary{
-      border-color: rgba(255,255,255,0.40);
-      background: rgba(255,255,255,0.12);
-    }
-    .pill--primary:hover{
-      background: rgba(255,255,255,0.18);
-    }
+        /* More obvious primary CV button */
+        .pill--primary {
+            border-color: rgba(255, 255, 255, 0.40);
+            background: rgba(255, 255, 255, 0.12);
+        }
 
-    h1 { margin: 10px 0 8px; font-size: 2rem; }
-    .subtitle { margin: 0 0 18px; opacity: 0.9; line-height: 1.5; }
+        .pill--primary:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
 
-    .section {
-      margin-top: 26px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 16px;
-    }
+        h1 {
+            margin: 10px 0 8px;
+            font-size: 2rem;
+        }
 
-    .section h2 { margin: 0 0 12px; font-size: 1.35rem; }
+        .subtitle {
+            margin: 0 0 18px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 14px;
-    }
+        .section {
+            margin-top: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 16px;
+        }
 
-    .card {
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 14px 14px 12px;
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-    }
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 1.35rem;
+        }
 
-    .card:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(255,255,255,0.28);
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 14px;
+        }
 
-    .card__head {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 12px;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
+        .card {
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 14px 14px 12px;
+            transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+        }
 
-    .role {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
+        .card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.28);
+        }
 
-    .date {
-      margin: 0;
-      font-weight: 700;
-      opacity: 0.9;
-      white-space: nowrap;
-    }
+        .card__head {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
 
-    .org {
-      margin: 0 0 10px;
-      opacity: 0.95;
-      line-height: 1.35;
-    }
+        .role {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
 
-    ul {
-      margin: 0 0 0 18px;
-      padding: 0;
-      line-height: 1.55;
-      opacity: 0.92;
-    }
+        .date {
+            margin: 0;
+            font-weight: 700;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
 
-    li { margin: 6px 0; }
+        .org {
+            margin: 0 0 10px;
+            opacity: 0.95;
+            line-height: 1.35;
+        }
 
-    .tagrow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
+        ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+            line-height: 1.55;
+            opacity: 0.92;
+        }
 
-    .tag {
-      border: 1px solid rgba(255,255,255,0.20);
-      background: rgba(0,0,0,0.10);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      opacity: 0.95;
-    }
-  </style>
+        li {
+            margin: 6px 0;
+        }
+
+        .tagrow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: rgba(0, 0, 0, 0.10);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            opacity: 0.95;
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="/" id="navbar__logo">Home</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
-        <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
-        <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
-        <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
-        <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">Home</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
+                <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
+                <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
+                <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
+                <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <main class="page">
-    <!-- CV link right at the top -->
-    <div class="toplink">
-      <!-- Absolute path (works when deployed at site root) -->
-      <a class="pill pill--primary" href="/curriculumnvitae.html">Curriculum Vitae (HTML)</a>
+    <main class="page">
+        <!-- CV link right at the top -->
+        <div class="toplink">
+            <a class="pill pill--primary" href="./curriculumnvitae.html">Curriculum Vitae (HTML)</a>
+        </div>
 
-      <!-- Relative fallback (works if your site is hosted under a subpath) -->
-      <a class="pill" href="curriculumnvitae.html">CV (fallback link)</a>
+        <h1>Work & Teaching Experience</h1>
+        <p class="subtitle">
+            A snapshot of professional roles, teaching leadership, and systems/software experience.
+        </p>
 
-      <!-- Optional PDF later -->
-      <!-- <a class="pill" href="/curriculumnvitae.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a> -->
-    </div>
+        <section class="section" id="teaching">
+            <h2>Teaching Experience</h2>
 
-    <h1>Work & Teaching Experience</h1>
-    <p class="subtitle">
-      A snapshot of professional roles, teaching leadership, and systems/software experience.
-    </p>
+            <div class="cards">
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Faculty Lecturer — Department of Computer Science, University of Waterloo</p>
+                        <p class="date">2006–2008, 2012–2021</p>
+                    </div>
+                    <p class="org">Waterloo, Ontario</p>
 
-    <section class="section" id="teaching">
-      <h2>Teaching Experience</h2>
+                    <ul>
+                        <li><strong>Primary course:</strong> <strong>CS251</strong> Computer Organization &amp; Design
+                            (ARM/MIPS, digital/microprocessor design, memory hierarchies, virtual memory, caches, RISC
+                            vs. CISC).</li>
+                        <li><strong>End-to-end course ownership:</strong> designed and maintained lectures, assignments,
+                            labs, exams, office hours, grading workflows, and term logistics.</li>
+                        <li><strong>Scale:</strong> typically taught 3 terms/year; supported ~400–500 students/year
+                            during the final five years.</li>
+                        <li><strong>Online delivery leadership:</strong> migrated CS251 to fully online delivery (Winter
+                            2020–Spring 2021), including structured assessment workflows in LEARN/D2L.</li>
+                        <li><strong>Teaching development &amp; integrity:</strong> delivered seminars/workshops for
+                            faculty on online teaching operations and academic integrity.
+                            Recorded talk:
+                            <a href="https://www.youtube.com/watch?v=UwjTtxcvaI0" target="_blank"
+                                rel="noopener noreferrer">
+                                Improving Academic Integrity with Scheduled, Timed-Interval Exams
+                            </a>.
+                        </li>
+                        <li><strong>Additional courses:</strong> CS136, CS135, CS115, CS116, CS100 (intro programming,
+                            algorithms/data structures &amp; design, functional programming; C++, C#, Racket).</li>
+                    </ul>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Faculty Lecturer — Department of Computer Science, University of Waterloo</p>
-            <p class="date">2006–2008, 2012–2021</p>
-          </div>
-          <p class="org">Waterloo, Ontario</p>
+                    <div class="tagrow">
+                        <span class="tag">Lecture design</span>
+                        <span class="tag">Assessment design</span>
+                        <span class="tag">LEARN/D2L</span>
+                        <span class="tag">Online delivery</span>
+                        <span class="tag">Large classes</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-          <ul>
-            <li><strong>Primary course:</strong> <strong>CS251</strong> Computer Organization &amp; Design (ARM/MIPS, digital/microprocessor design, memory hierarchies, virtual memory, caches, RISC vs. CISC).</li>
-            <li><strong>End-to-end course ownership:</strong> designed and maintained lectures, assignments, labs, exams, office hours, grading workflows, and term logistics.</li>
-            <li><strong>Scale:</strong> typically taught 3 terms/year; supported ~400–500 students/year during the final five years.</li>
-            <li><strong>Online delivery leadership:</strong> migrated CS251 to fully online delivery (Winter 2020–Spring 2021), including structured assessment workflows in LEARN/D2L.</li>
-            <li><strong>Teaching development &amp; integrity:</strong> delivered seminars/workshops for faculty on online teaching operations and academic integrity.
-              Recorded talk:
-              <a href="https://www.youtube.com/watch?v=UwjTtxcvaI0" target="_blank" rel="noopener noreferrer">
-                Improving Academic Integrity with Scheduled, Timed-Interval Exams
-              </a>.
-            </li>
-            <li><strong>Additional courses:</strong> CS136, CS135, CS115, CS116, CS100 (intro programming, algorithms/data structures &amp; design, functional programming; C++, C#, Racket).</li>
-          </ul>
+        <section class="section" id="professional">
+            <h2>Professional Experience</h2>
 
-          <div class="tagrow">
-            <span class="tag">Lecture design</span>
-            <span class="tag">Assessment design</span>
-            <span class="tag">LEARN/D2L</span>
-            <span class="tag">Online delivery</span>
-            <span class="tag">Large classes</span>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div class="cards">
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Engineering Faculty Liaison — Centre for Teaching Excellence, University of
+                            Waterloo</p>
+                        <p class="date">2006–2008</p>
+                    </div>
+                    <p class="org">Waterloo, Ontario</p>
+                    <ul>
+                        <li>Partnered with Engineering faculty to adopt and operationalize innovative teaching
+                            practices.</li>
+                        <li>Managed new-faculty LEARN workshops and coordinated teaching seminars.</li>
+                        <li>Led seminars on effective pedagogy and course design.</li>
+                    </ul>
+                </article>
 
-    <section class="section" id="professional">
-      <h2>Professional Experience</h2>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Software Engineer — XLTEK Corporation</p>
+                        <p class="date">2001–2003</p>
+                    </div>
+                    <p class="org">Oakville, Ontario</p>
+                    <ul>
+                        <li>Developed software for medical devices used in operating rooms and ICUs (e.g., Johns Hopkins
+                            Hospital deployments).</li>
+                        <li>Programmed patient operating monitor software interfacing with I/O peripherals; focused on
+                            hardware–software boundary.</li>
+                        <li><strong>Languages:</strong> C++ and DSL assembly.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">C++</span>
+                        <span class="tag">HW/SW interface</span>
+                        <span class="tag">Medical devices</span>
+                    </div>
+                </article>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Engineering Faculty Liaison — Centre for Teaching Excellence, University of Waterloo</p>
-            <p class="date">2006–2008</p>
-          </div>
-          <p class="org">Waterloo, Ontario</p>
-          <ul>
-            <li>Partnered with Engineering faculty to adopt and operationalize innovative teaching practices.</li>
-            <li>Managed new-faculty LEARN workshops and coordinated teaching seminars.</li>
-            <li>Led seminars on effective pedagogy and course design.</li>
-          </ul>
-        </article>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Research &amp; Development — General Motors Defense Division</p>
+                        <p class="date">2000–2001</p>
+                    </div>
+                    <p class="org">London, Ontario</p>
+                    <ul>
+                        <li>Designed test suites and coordinated field tests for military vehicles.</li>
+                        <li>Built Light Armored Vehicle simulator tools (LAVSim) to exercise vehicles under varied
+                            terrains.</li>
+                        <li>Contributed to R&amp;D roadmap for next-generation simulation software.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Testing</span>
+                        <span class="tag">R&amp;D</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Software Engineer — XLTEK Corporation</p>
-            <p class="date">2001–2003</p>
-          </div>
-          <p class="org">Oakville, Ontario</p>
-          <ul>
-            <li>Developed software for medical devices used in operating rooms and ICUs (e.g., Johns Hopkins Hospital deployments).</li>
-            <li>Programmed patient operating monitor software interfacing with I/O peripherals; focused on hardware–software boundary.</li>
-            <li><strong>Languages:</strong> C++ and DSL assembly.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">C++</span>
-            <span class="tag">HW/SW interface</span>
-            <span class="tag">Medical devices</span>
-          </div>
-        </article>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Software Development Team Lead — Q-Junction</p>
+                        <p class="date">1999–2000</p>
+                    </div>
+                    <p class="org">Waterloo, Ontario</p>
+                    <ul>
+                        <li>Led a startup engineering team; delivered an online shopping tool end-to-end.</li>
+                        <li>Supported product delivery milestones contributing to venture capital funding.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Team lead</span>
+                        <span class="tag">Product delivery</span>
+                        <span class="tag">Startup</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Research &amp; Development — General Motors Defense Division</p>
-            <p class="date">2000–2001</p>
-          </div>
-          <p class="org">London, Ontario</p>
-          <ul>
-            <li>Designed test suites and coordinated field tests for military vehicles.</li>
-            <li>Built Light Armored Vehicle simulator tools (LAVSim) to exercise vehicles under varied terrains.</li>
-            <li>Contributed to R&amp;D roadmap for next-generation simulation software.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Simulation</span>
-            <span class="tag">Testing</span>
-            <span class="tag">R&amp;D</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Software Development Team Lead — Q-Junction</p>
-            <p class="date">1999–2000</p>
-          </div>
-          <p class="org">Waterloo, Ontario</p>
-          <ul>
-            <li>Led a startup engineering team; delivered an online shopping tool end-to-end.</li>
-            <li>Supported product delivery milestones contributing to venture capital funding.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Team lead</span>
-            <span class="tag">Product delivery</span>
-            <span class="tag">Startup</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="role">Software–Hardware Developer — John Crane Canada</p>
-            <p class="date">1998–1999</p>
-          </div>
-          <p class="org">Stoney Creek, Ontario</p>
-          <ul>
-            <li>First in-house programmer; automated workflow across manufacturing, ordering, and distribution.</li>
-            <li>Designed and maintained platforms used across organizational units.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Automation</span>
-            <span class="tag">Manufacturing</span>
-            <span class="tag">Systems</span>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="role">Software–Hardware Developer — John Crane Canada</p>
+                        <p class="date">1998–1999</p>
+                    </div>
+                    <p class="org">Stoney Creek, Ontario</p>
+                    <ul>
+                        <li>First in-house programmer; automated workflow across manufacturing, ordering, and
+                            distribution.</li>
+                        <li>Designed and maintained platforms used across organizational units.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Automation</span>
+                        <span class="tag">Manufacturing</span>
+                        <span class="tag">Systems</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
