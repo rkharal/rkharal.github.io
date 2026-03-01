@@ -1,406 +1,423 @@
 <!-- Volunteer.html (updated: 2 sections + added Leadership/Extracurricular) -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Volunteer Work</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Work</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-  <style>
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 22px 16px 64px;
-      font-family: "Kumbh Sans", sans-serif;
-    }
+    <style>
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 22px 16px 64px;
+            font-family: "Kumbh Sans", sans-serif;
+        }
 
-    .pillrow {
-      margin: 18px 0 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
+        .pillrow {
+            margin: 18px 0 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
 
-    .pill {
-      display: inline-block;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      background: rgba(0, 0, 0, 0.10);
-      padding: 8px 12px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
+        .pill {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(0, 0, 0, 0.10);
+            padding: 8px 12px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
 
-    .pill:hover {
-      border-color: rgba(255, 255, 255, 0.40);
-      background: rgba(0, 0, 0, 0.18);
-    }
+        .pill:hover {
+            border-color: rgba(255, 255, 255, 0.40);
+            background: rgba(0, 0, 0, 0.18);
+        }
 
-    h1 { margin: 10px 0 8px; font-size: 2rem; }
-    .subtitle { margin: 0 0 18px; opacity: 0.9; line-height: 1.5; }
+        h1 {
+            margin: 10px 0 8px;
+            font-size: 2rem;
+        }
 
-    .section {
-      margin-top: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 16px;
-    }
+        .subtitle {
+            margin: 0 0 18px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
 
-    .section h2 {
-      margin: 0 0 12px;
-      font-size: 1.35rem;
-    }
+        .section {
+            margin-top: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 16px;
+        }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 1.35rem;
+        }
 
-    .card {
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 14px 14px 12px;
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
 
-    .card:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.09);
-      border-color: rgba(255, 255, 255, 0.28);
-    }
+        .card {
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 14px 14px 12px;
+            transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+        }
 
-    .card__head {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 12px;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
+        .card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.28);
+        }
 
-    .org {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
+        .card__head {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
 
-    .date {
-      margin: 0;
-      font-weight: 700;
-      opacity: 0.9;
-      white-space: nowrap;
-    }
+        .org {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
 
-    .role {
-      margin: 0 0 6px;
-      opacity: 0.95;
-      line-height: 1.35;
-      font-weight: 700;
-    }
+        .date {
+            margin: 0;
+            font-weight: 700;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
 
-    .loc {
-      margin: 0;
-      opacity: 0.9;
-      line-height: 1.35;
-    }
+        .role {
+            margin: 0 0 6px;
+            opacity: 0.95;
+            line-height: 1.35;
+            font-weight: 700;
+        }
 
-    ul {
-      margin: 8px 0 0 18px;
-      padding: 0;
-      line-height: 1.55;
-      opacity: 0.92;
-    }
+        .loc {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.35;
+        }
 
-    li { margin: 6px 0; }
+        ul {
+            margin: 8px 0 0 18px;
+            padding: 0;
+            line-height: 1.55;
+            opacity: 0.92;
+        }
 
-    .tagrow {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
+        li {
+            margin: 6px 0;
+        }
 
-    .tag {
-      border: 1px solid rgba(255, 255, 255, 0.20);
-      background: rgba(0, 0, 0, 0.10);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      opacity: 0.95;
-    }
+        .tagrow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
 
-    .foot {
-      margin-top: 14px;
-      opacity: 0.9;
-      line-height: 1.55;
-    }
-  </style>
+        .tag {
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: rgba(0, 0, 0, 0.10);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            opacity: 0.95;
+        }
+
+        .foot {
+            margin-top: 14px;
+            opacity: 0.9;
+            line-height: 1.55;
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="/" id="navbar__logo">Home</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
-        <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
-        <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
-        <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
-        <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">Home</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
+                <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
+                <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
+                <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
+                <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
+                <li class="navbar__item">
+                    <a href="https://drive.google.com/file/d/1Yk9Ma5B7tF6N2knUZvbMB8L_wsIcdG68/view?usp=drive_link"
+                        class="navbar__links" target="_blank" rel="noopener noreferrer">Research Summary</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <main class="page">
-    <div class="pillrow">
-      <a class="pill"
-         href="https://drive.google.com/file/d/1pNFpzVs9IxN_YG1k52-lcNJtKf9Nn-FG/view?usp=drive_link"
-         target="_blank" rel="noopener noreferrer">
-        View CV (PDF)
-      </a>
-    </div>
+    <main class="page">
+        <div class="pillrow">
+            <a class="pill" href="https://drive.google.com/file/d/1pNFpzVs9IxN_YG1k52-lcNJtKf9Nn-FG/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                View CV (PDF)
+            </a>
+        </div>
 
-    <h1>Volunteer Work</h1>
-    <p class="subtitle">
-      Leadership, mentorship, and community service in technical and non-technical settings.
-    </p>
+        <h1>Volunteer Work</h1>
+        <p class="subtitle">
+            Leadership, mentorship, and community service in technical and non-technical settings.
+        </p>
 
-    <!-- Technical Volunteer Experience -->
-    <section class="section" id="technical">
-      <h2>Technical Volunteer Experience</h2>
+        <!-- Technical Volunteer Experience -->
+        <section class="section" id="technical">
+            <h2>Technical Volunteer Experience</h2>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <p class="org">CS Graduate Students' Association, University of Waterloo</p>
-            <p class="date">2023 – 2024</p>
-          </div>
-          <p class="role">Board Member</p>
-          <p class="loc">Waterloo, Ontario</p>
-          <ul>
-            <li>Organized team building, mental health, and well-being events each term.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Leadership</span>
-            <span class="tag">Student community</span>
-          </div>
-        </article>
+            <div class="cards">
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">CS Graduate Students' Association, University of Waterloo</p>
+                        <p class="date">2023 – 2024</p>
+                    </div>
+                    <p class="role">Board Member</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                    <ul>
+                        <li>Organized team building, mental health, and well-being events each term.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Student community</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="org">FLIGHT Summer STEM Program (WiCS)</p>
-            <p class="date">2023</p>
-          </div>
-          <p class="role">Instructor / Mentor</p>
-          <p class="loc">Waterloo, Ontario</p>
-          <ul>
-            <li>Two-week program for high school girls implementing a UN sustainable development project; lectures, workshops, seminars.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Mentorship</span>
-            <span class="tag">STEM outreach</span>
-          </div>
-        </article>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">FLIGHT Summer STEM Program (WiCS)</p>
+                        <p class="date">2023</p>
+                    </div>
+                    <p class="role">Instructor / Mentor</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                    <ul>
+                        <li>Two-week program for high school girls implementing a UN sustainable development project;
+                            lectures, workshops, seminars.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Mentorship</span>
+                        <span class="tag">STEM outreach</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="org">FUSION Business–Tech Competition</p>
-            <p class="date">2022</p>
-          </div>
-          <p class="role">Panel Judge</p>
-          <p class="loc">Waterloo, Ontario</p>
-          <ul>
-            <li>Evaluated projects in SciTech, FinTech, and Entrepreneurship (Faculties of Science and Business).</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">Judging</span>
-            <span class="tag">Entrepreneurship</span>
-          </div>
-        </article>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">FUSION Business–Tech Competition</p>
+                        <p class="date">2022</p>
+                    </div>
+                    <p class="role">Panel Judge</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                    <ul>
+                        <li>Evaluated projects in SciTech, FinTech, and Entrepreneurship (Faculties of Science and
+                            Business).</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">Judging</span>
+                        <span class="tag">Entrepreneurship</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="org">
-              <a href="https://gitlab.com/trbot86/multicore_lab_wiki/-/wikis/Fall-2022-Biweekly-Reading-Group"
-                 target="_blank" rel="noopener noreferrer">
-                Reading Group, Multicore Computing Lab
-              </a>
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">
+                            <a href="https://gitlab.com/trbot86/multicore_lab_wiki/-/wikis/Fall-2022-Biweekly-Reading-Group"
+                                target="_blank" rel="noopener noreferrer">
+                                Reading Group, Multicore Computing Lab
+                            </a>
+                        </p>
+                        <p class="date">2022</p>
+                    </div>
+                    <p class="role">Participant</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                    <div class="tagrow">
+                        <span class="tag">HPC</span>
+                        <span class="tag">Research reading group</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Memberships</p>
+                        <p class="date"></p>
+                    </div>
+                    <ul>
+                        <li>Digital Research Alliance of Canada (HPC).</li>
+                        <li>CS–Can / Info–Can (National CS Academic Community).</li>
+                        <li>Association for Women in Mathematics.</li>
+                    </ul>
+                    <div class="tagrow">
+                        <span class="tag">HPC</span>
+                        <span class="tag">Academic community</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Non-Technical Community Work -->
+        <section class="section" id="community">
+            <h2>Non-Technical Community Work</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">KW Neighbourhood Food Share Program</p>
+                        <p class="date">Mar 2025</p>
+                    </div>
+                    <p class="role">Lead Coordinator, Meal Share</p>
+                    <p class="loc">Kitchener–Waterloo, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Mental Health &amp; Addiction Seminar</p>
+                        <p class="date">2025</p>
+                    </div>
+                    <p class="role">Guest Speaker, Family Centre of Kitchener–Waterloo</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Mental Health &amp; Addiction Support Group</p>
+                        <p class="date">Jan 2025</p>
+                    </div>
+                    <p class="role">Session Coordinator; Workshop Speaker</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">St. John’s Soup Kitchen</p>
+                        <p class="date">2005 – 2021</p>
+                    </div>
+                    <p class="role">Lead Coordinator, annual community meal service</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Victoria Street Tent Community</p>
+                        <p class="date">2021 – 2022</p>
+                    </div>
+                    <p class="role">Meal / Donations Coordination</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Ray of Hope Addiction Treatment Centre</p>
+                        <p class="date">2021 – 2023</p>
+                    </div>
+                    <p class="role">Senior Coordinator (monthly meal service)</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Muslim Social Services</p>
+                        <p class="date">2015 – 2017</p>
+                    </div>
+                    <p class="role">Board of Directors; Ramadan community food drive</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Charles Street Men’s Hostel</p>
+                        <p class="date">2016 – 2021</p>
+                    </div>
+                    <p class="role">Lead coordinator, annual meal service</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">oneROOF Youth Services</p>
+                        <p class="date">2022</p>
+                    </div>
+                    <p class="role">Lead coordinator, annual meal service</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">Salvation Army Addiction Treatment Centre</p>
+                        <p class="date">2022</p>
+                    </div>
+                    <p class="role">Donations collection &amp; delivery</p>
+                    <p class="loc">London, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">CMW: Coalition of Muslim Women</p>
+                        <p class="date">2021</p>
+                    </div>
+                    <p class="role">Parent volunteer, youth addiction services</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">MAC Maple Grove School</p>
+                        <p class="date">2011 – 2015</p>
+                    </div>
+                    <p class="role">Parent volunteer, event coordination; Board (2012–2016)</p>
+                    <p class="loc">Kitchener, Ontario</p>
+                </article>
+
+                <article class="card">
+                    <div class="card__head">
+                        <p class="org">TES Elementary School</p>
+                        <p class="date">2020 – 2023</p>
+                    </div>
+                    <p class="role">Parent volunteer, event coordination</p>
+                    <p class="loc">Waterloo, Ontario</p>
+                </article>
+            </div>
+
+            <p class="foot">
+                <em>References available upon request.</em> Contact:
+                <a href="mailto:rkharal@uwaterloo.ca">rkharal@uwaterloo.ca</a>.
             </p>
-            <p class="date">2022</p>
-          </div>
-          <p class="role">Participant</p>
-          <p class="loc">Waterloo, Ontario</p>
-          <div class="tagrow">
-            <span class="tag">HPC</span>
-            <span class="tag">Research reading group</span>
-          </div>
-        </article>
+        </section>
+    </main>
 
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Memberships</p>
-            <p class="date"></p>
-          </div>
-          <ul>
-            <li>Digital Research Alliance of Canada (HPC).</li>
-            <li>CS–Can / Info–Can (National CS Academic Community).</li>
-            <li>Association for Women in Mathematics.</li>
-          </ul>
-          <div class="tagrow">
-            <span class="tag">HPC</span>
-            <span class="tag">Academic community</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Non-Technical Community Work -->
-    <section class="section" id="community">
-      <h2>Non-Technical Community Work</h2>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card__head">
-            <p class="org">KW Neighbourhood Food Share Program</p>
-            <p class="date">Mar 2025</p>
-          </div>
-          <p class="role">Lead Coordinator, Meal Share</p>
-          <p class="loc">Kitchener–Waterloo, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Mental Health &amp; Addiction Seminar</p>
-            <p class="date">2025</p>
-          </div>
-          <p class="role">Guest Speaker, Family Centre of Kitchener–Waterloo</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Mental Health &amp; Addiction Support Group</p>
-            <p class="date">Jan 2025</p>
-          </div>
-          <p class="role">Session Coordinator; Workshop Speaker</p>
-          <p class="loc">Waterloo, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">St. John’s Soup Kitchen</p>
-            <p class="date">2005 – 2021</p>
-          </div>
-          <p class="role">Lead Coordinator, annual community meal service</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Victoria Street Tent Community</p>
-            <p class="date">2021 – 2022</p>
-          </div>
-          <p class="role">Meal / Donations Coordination</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Ray of Hope Addiction Treatment Centre</p>
-            <p class="date">2021 – 2023</p>
-          </div>
-          <p class="role">Senior Coordinator (monthly meal service)</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Muslim Social Services</p>
-            <p class="date">2015 – 2017</p>
-          </div>
-          <p class="role">Board of Directors; Ramadan community food drive</p>
-          <p class="loc">Waterloo, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Charles Street Men’s Hostel</p>
-            <p class="date">2016 – 2021</p>
-          </div>
-          <p class="role">Lead coordinator, annual meal service</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">oneROOF Youth Services</p>
-            <p class="date">2022</p>
-          </div>
-          <p class="role">Lead coordinator, annual meal service</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">Salvation Army Addiction Treatment Centre</p>
-            <p class="date">2022</p>
-          </div>
-          <p class="role">Donations collection &amp; delivery</p>
-          <p class="loc">London, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">CMW: Coalition of Muslim Women</p>
-            <p class="date">2021</p>
-          </div>
-          <p class="role">Parent volunteer, youth addiction services</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">MAC Maple Grove School</p>
-            <p class="date">2011 – 2015</p>
-          </div>
-          <p class="role">Parent volunteer, event coordination; Board (2012–2016)</p>
-          <p class="loc">Kitchener, Ontario</p>
-        </article>
-
-        <article class="card">
-          <div class="card__head">
-            <p class="org">TES Elementary School</p>
-            <p class="date">2020 – 2023</p>
-          </div>
-          <p class="role">Parent volunteer, event coordination</p>
-          <p class="loc">Waterloo, Ontario</p>
-        </article>
-      </div>
-
-      <p class="foot">
-        <em>References available upon request.</em> Contact:
-        <a href="mailto:rkharal@uwaterloo.ca">rkharal@uwaterloo.ca</a>.
-      </p>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
