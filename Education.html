@@ -1,73 +1,267 @@
+<!-- Education.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px 16px 64px;
+      font-family: "Kumbh Sans", sans-serif;
+    }
+
+    h1 { margin: 10px 0 8px; font-size: 2rem; }
+    .subtitle { margin: 0 0 18px; opacity: 0.9; line-height: 1.5; }
+
+    .section {
+      margin-top: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .card {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .card__head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .degree { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+    .date { margin: 0; font-weight: 700; opacity: 0.9; white-space: nowrap; }
+
+    .school { margin: 0 0 8px; opacity: 0.95; line-height: 1.35; }
+    .location { opacity: 0.9; }
+
+    ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    li { margin: 6px 0; }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .pill:hover {
+      border-color: rgba(255, 255, 255, 0.40);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      background: rgba(0, 0, 0, 0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      opacity: 0.95;
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">Home</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/Education.html" class="navbar__links">
-                        Education
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Work.html" class="navbar__links">
-                        Work Experience
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Volunteer.html" class="navbar__links">
-                        Volunteer Work
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/PhD.html" class="navbar__links">
-                        Publications
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Teaching.html" class="navbar__links">
-                        Teaching
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">Home</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
+        <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
+        <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
+        <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
+        <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="education">
-        <h1>Education</h1>
-        <div class="education__container">
-
-                <div class="education__card1">
-                    <a href="/PhD.html">PhD (2020 - 2025)</a>
-                </div>
-            
-                <div class="education__card2">
-                    <a href="/Masters.html">Masters (2004 - 2006)</a>
-                </div>
-
-                <div class="education__card3">
-                    <a href="/Bachelors.html">Bachelors (1997 - 2002)</a>
-                </div>
-            
-        </div>
+  <main class="page">
+    <div class="pillrow">
+      <a class="pill"
+         href="https://drive.google.com/uc?export=download&id=1pNFpzVs9IxN_YG1k52-lcNJtKf9Nn-FG"
+         target="_blank" rel="noopener noreferrer">
+        Download CV (PDF)
+      </a>
     </div>
 
-    <script src="app.js"></script>
+    <h1>Education</h1>
+    <p class="subtitle">
+      University of Waterloo — PhD (in progress), Master’s, and B.Sc. Honours.
+    </p>
 
+    <section class="section">
+      <div class="cards">
+        <!-- PhD -->
+        <article class="card">
+          <div class="card__head">
+            <p class="degree">PhD (in progress), Computer Science</p>
+            <p class="date">2020 – 2025</p>
+          </div>
+          <p class="school"><strong>University of Waterloo</strong> <span class="location">— Waterloo, Ontario</span></p>
+
+          <ul>
+            <li>Completed four full-time years as a PhD student.</li>
+            <li>
+              Supervisors:
+              <a href="https://www.cs.utoronto.ca/~tabrown/" target="_blank" rel="noopener noreferrer">Trevor Brown</a>
+              and
+              <a href="https://plg.uwaterloo.ca/~pabuhr/" target="_blank" rel="noopener noreferrer">Peter Buhr</a>.
+            </li>
+            <li><strong>Recent research activities (2024–2025):</strong></li>
+            <li>
+              <ul>
+                <li>Supervised nine research interns in the Multicore Computing Lab on collaborative GPU systems projects.</li>
+                <li>Submitted a survey to Elsevier <em>Journal of Parallel and Distributed Computing</em> on RTX hardware acceleration in non-graphical domains (June 2025).</li>
+                <li>Led large-scale data analysis project on GPU structures for scalable, high-performance operations; designed benchmarks, automated batch runs, analyzed end-to-end latency/throughput under diverse workloads.</li>
+                <li>Conducted deep kernel-level investigations (profiling, memory-access patterns, cooperative group/warp improvements, occupancy tuning, contention reduction for atomics/synchronization).</li>
+                <li>Collaboration with University of Mainz (Germany) toward a second ICDE submission on GPU data structure performance optimizations.</li>
+                <li>Adversarial robustness in ML vision classification: securing 3D models against corruptions/malicious attacks; accepted at VISAPP (March 2026).</li>
+                <li>Reviewer for ICMLA, BMVC; Program Committee Member for ICMLA 2024.</li>
+                <li>Experimental stack: CUDA, OptiX, C, C++, PyTorch3D.</li>
+              </ul>
+            </li>
+            <li><strong>Awards:</strong></li>
+            <li>
+              <ul>
+                <li>Ontario Graduate Scholarship (three-year, 2022–2026).</li>
+                <li>University of Waterloo President’s Graduate Scholarship (three-year, 2022–2026).</li>
+                <li>University of Waterloo Matching Award: Mathematics (three-year, 2022–2026).</li>
+                <li>Sharon &amp; David Johnston Award (two terms, 2023–2024).</li>
+                <li>Math Domestic Graduate Student Award (2022).</li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="tagrow">
+            <span class="tag">GPU systems</span>
+            <span class="tag">CUDA</span>
+            <span class="tag">OptiX</span>
+            <span class="tag">PyTorch3D</span>
+            <span class="tag">Systems research</span>
+          </div>
+        </article>
+
+        <!-- Masters -->
+        <article class="card">
+          <div class="card__head">
+            <p class="degree">Master’s in Mathematics (Computer Science, Bioinformatics)</p>
+            <p class="date">2004 – 2006</p>
+          </div>
+          <p class="school"><strong>University of Waterloo</strong> <span class="location">— Waterloo, Ontario</span></p>
+
+          <ul>
+            <li>
+              Thesis:
+              <a href="https://uwspace.uwaterloo.ca/items/a3f31fa1-0b21-48b6-8101-7e6e79e6c2ac"
+                 target="_blank" rel="noopener noreferrer">
+                Semidefinite Embedding for the Dimensionality Reduction of DNA Microarray Data
+              </a>
+              (published).
+            </li>
+            <li>Algorithms for high-dimensional data: Spectral Embedding, Isomap, LLE, PCA, Semidefinite Embedding.</li>
+            <li>Introduced KAS: Kernel Alignment with Semidefinite Embedding.</li>
+            <li>Graduated with Honours; research posters/presentations in Health Informatics, Algorithms &amp; Complexity, and AI.</li>
+          </ul>
+
+          <div class="tagrow">
+            <span class="tag">Dimensionality reduction</span>
+            <span class="tag">PCA</span>
+            <span class="tag">Spectral methods</span>
+            <span class="tag">Bioinformatics</span>
+          </div>
+        </article>
+
+        <!-- Bachelors -->
+        <article class="card">
+          <div class="card__head">
+            <p class="degree">B.Sc. Honours: Computer Science / Electrical Engineering Option; Minor in Physics</p>
+            <p class="date">1997 – 2002</p>
+          </div>
+          <p class="school"><strong>University of Waterloo</strong> <span class="location">— Waterloo, Ontario</span></p>
+
+          <ul>
+            <li>
+              Undergraduate research assistant (URA):
+              Computer Networks
+              (<a href="https://rboutaba.cs.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">Prof. Raouf Boutaba</a>, CS);
+              Bluetooth integration in IoT
+              (<a href="https://uwaterloo.ca/advanced-manufacturing-research/profile/safavi" target="_blank" rel="noopener noreferrer">Prof. Safavi–Naeini</a>, Engineering).
+            </li>
+            <li>Additional interests: Physics, Chemistry, Computer Engineering.</li>
+          </ul>
+
+          <div class="tagrow">
+            <span class="tag">Computer networks</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Electrical engineering</span>
+            <span class="tag">Physics minor</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
