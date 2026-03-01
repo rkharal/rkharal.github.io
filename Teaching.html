@@ -1,70 +1,331 @@
+<!-- Teaching.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px 16px 64px;
+      font-family: "Kumbh Sans", sans-serif;
+    }
+
+    .pillrow {
+      margin: 18px 0 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .pill:hover {
+      border-color: rgba(255, 255, 255, 0.40);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    h1 { margin: 10px 0 8px; font-size: 2rem; }
+    .subtitle { margin: 0 0 18px; opacity: 0.9; line-height: 1.55; }
+
+    .section {
+      margin-top: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .card {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .card__head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .date {
+      margin: 0;
+      font-weight: 700;
+      opacity: 0.9;
+      white-space: nowrap;
+    }
+
+    .sub {
+      margin: 0 0 10px;
+      opacity: 0.95;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 8px 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    li { margin: 6px 0; }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      background: rgba(0, 0, 0, 0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      opacity: 0.95;
+    }
+
+    .foot {
+      margin-top: 12px;
+      opacity: 0.9;
+      line-height: 1.55;
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">Home</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/Education.html" class="navbar__links">
-                        Education
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Work.html" class="navbar__links">
-                        Work Experience
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Volunteer.html" class="navbar__links">
-                        Volunteer Work
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/PhD.html" class="navbar__links">
-                        Publications
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Teaching.html" class="navbar__links">
-                        Teaching
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">Home</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
+        <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
+        <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
+        <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
+        <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h1>Teaching Experience</h1>
-    <h2>University of Waterloo, Faculty Lecturer</h2>
+  <main class="page">
+    <div class="pillrow">
+      <a class="pill"
+         href="https://drive.google.com/file/d/1pNFpzVs9IxN_YG1k52-lcNJtKf9Nn-FG/view?usp=drive_link"
+         target="_blank" rel="noopener noreferrer">
+        View CV (PDF)
+      </a>
+      <a class="pill"
+         href="https://www.youtube.com/watch?v=UwjTtxcvaI0"
+         target="_blank" rel="noopener noreferrer">
+        Recorded Seminar (YouTube)
+      </a>
+    </div>
 
-    <h3>CS251, Computer Organization and Design (2015 - 2021)</h3>
-    <p>- Worked extensively with D2L online learning management system</p>
-    <p>- Updating course topics and continue to improve the course learning experience for students </p>
-    <p>- Course topics include 64-bit ARM, MIPS, Digital Design, Microprocessor Design, Memory Hierarchies, Virtual Memory, Caches, RISC vs CISC architectures</p>
-    <p>- Migrated CS251 to completely online delivery for Winter 2020 to Spring 2021 </p>
-    <p>- Delivered seminars and online teaching workshops to university teaching faculty </p>
-    <p>- <a href="https://www.youtube.com/watch?v=UwjTtxcvaI0" target="_blank">Improving Academic Integrity with Scheduled, Timed-Interval Exams</a></p>
+    <h1>Teaching</h1>
+    <p class="subtitle">
+      University-level Computer Science teaching, course leadership at scale, and online instruction leadership
+      (LEARN/D2L), informed by a systems/architecture foundation and PhD-level research in GPU computing and ML robustness.
+    </p>
 
-    <h3>CS136, CS135, CS115, CS116, CS100 (2013-2016)</h3>
-    <p>- Deliver undergraduate Computer Science courses to major and non-major students.</p>
-    <p>- Course topics include Introduction to Computer Science, Computer Algorithms and Design</p>
-    <p>- Introduction to Functional Programming, C++, C#, Racket</p>
+    <section class="section" id="profile">
+      <h2>Teaching Profile</h2>
+      <p>
+        I bring over a decade of university-level Computer Science teaching experience, combined with a strong
+        Computer Engineering and systems foundation and current PhD-level expertise in GPU computing, large-scale
+        experimentation, and machine learning robustness. I am known for building excellent rapport with students
+        and maintaining strong, respectful classroom relationships. Throughout my lecturer appointments, my student
+        feedback and course evaluations were consistently high, reflecting clarity of instruction, fairness,
+        and strong support for student learning. I paused teaching to pursue full-time PhD studies.
+      </p>
+    </section>
 
-    <h3>CS251 Computer Organization and Architecture (First Edition) (2004 - 2006)</h3>
+    <section class="section" id="appointments">
+      <h2>Teaching Appointments</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <p class="title">University of Waterloo — Department of Computer Science</p>
+            <p class="date">2006–2008, 2012–2021</p>
+          </div>
+          <p class="sub">Faculty Lecturer</p>
+          <ul>
+            <li>Taught three terms per academic year; averaged 400–500 students per year during the last five years of teaching (~4500 students overall).</li>
+            <li>Full responsibility for course delivery: lecture design, curriculum/content updates, assignment and exam authoring, grading workflows, office hours, and student support.</li>
+          </ul>
+          <div class="tagrow">
+            <span class="tag">Course leadership</span>
+            <span class="tag">Large-scale teaching</span>
+            <span class="tag">Assessment design</span>
+            <span class="tag">Student support</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <section class="section" id="courses">
+      <h2>Courses and Instructional Areas</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <p class="title">Courses taught</p>
+            <p class="date"></p>
+          </div>
+          <p>CS251, CS136, CS135, CS115, CS116, CS100.</p>
+
+          <p><strong>Core instructional areas:</strong></p>
+          <ul>
+            <li><strong>Programming foundations:</strong> computer programming; functional/recursive programming; program design and debugging.</li>
+            <li><strong>Algorithms and data structures:</strong> algorithmic thinking, complexity-aware design, data structures and implementation.</li>
+            <li><strong>Computer architecture and systems:</strong> CPU organization, instruction sets (ARM/MIPS concepts), memory hierarchies, caches, virtual memory, and memory management.</li>
+            <li><strong>Course highlight (CS251):</strong> Computer Organization &amp; Design with emphasis on architecture, microprocessor fundamentals, and performance-relevant systems concepts.</li>
+          </ul>
+
+          <div class="tagrow">
+            <span class="tag">Programming</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Architecture</span>
+            <span class="tag">Systems</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="online">
+      <h2>Teaching Leadership and Online Instruction</h2>
+      <p>
+        I took a leadership role in online course operations and delivery. I managed course infrastructure using
+        LEARN/D2L, coordinated assessment logistics at scale, and supported high-volume student communications.
+        I led the migration of CS251 to fully online delivery (Winter 2020–Spring 2021) and delivered cross-campus
+        seminars/workshops to help teaching faculty port courses online and maintain academic integrity.
+      </p>
+      <p>
+        Recorded seminar:
+        <a href="https://www.youtube.com/watch?v=UwjTtxcvaI0" target="_blank" rel="noopener noreferrer">
+          <em>Improving Academic Integrity with Scheduled, Timed-Interval Exams</em>
+        </a>.
+      </p>
+
+      <div class="tagrow">
+        <span class="tag">LEARN/D2L</span>
+        <span class="tag">Online delivery</span>
+        <span class="tag">Academic integrity</span>
+        <span class="tag">Course ops</span>
+      </div>
+    </section>
+
+    <section class="section" id="grad">
+      <h2>Graduate-Level Teaching (PhD-Enabled Expertise)</h2>
+      <ul>
+        <li><strong>Large-Scale Data Analytics through Parallel Computing:</strong> benchmark design, automation of large experimental campaigns, end-to-end analysis, reproducible systems research.</li>
+        <li><strong>GPU Programming and Massively Parallel Systems (HPC):</strong> C/C++/CUDA, profiling, memory behavior, warp-level primitives, throughput/latency evaluation.</li>
+        <li><strong>Concurrent data structures on distributed and multicore systems:</strong> shared-memory concurrency on CPU/GPU, scalable design, methodology, performance anomalies.</li>
+        <li><strong>Deep neural networks (DNNs):</strong> defense strategies for adversarial robustness in real-time, mission-critical systems.</li>
+        <li><strong>Machine learning for vision classification:</strong> robustness and corruption resilience in 2D/3D vision with compute-efficient defenses.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="mentorship">
+      <h2>Student Mentorship and Research Supervision</h2>
+      <p>
+        During my PhD, I independently supervised <strong>nine</strong> research interns and guided them through
+        research execution, experimental rigor, and scholarly writing toward publication-quality outcomes.
+        My mentorship emphasizes strong problem formulation, careful evaluation design, clear communication, and
+        developing the habits needed to publish in top-tier venues. I also delivered multiple research seminars on
+        GPU systems topics and machine learning robustness, supporting a collaborative research culture.
+      </p>
+    </section>
+
+    <section class="section" id="philosophy">
+      <h2>Teaching Philosophy</h2>
+      <p>
+        I strongly believe in teaching from the ground up to ensure students share a solid, consistent foundation.
+        My goal is to minimize gaps in students' understanding that can compound as the material becomes more advanced.
+        I emphasize first principles, such that students can build confidently from fundamentals to complex systems.
+        This approach has been effective across large undergraduate courses and smaller graduate seminars and lectures.
+        I bring a teaching mindset to all speaking engagements: my objective is clear, efficient dissemination of
+        information so that participants leave with a strong grasp of the concepts and how to apply them.
+      </p>
+    </section>
+
+    <section class="section" id="evidence">
+      <h2>Evidence of Effectiveness</h2>
+      <p>
+        My teaching evaluations have consistently been strong and highly rated among my peers. This track record
+        supported my appointment to teach undergraduate Computer Science at the University of Waterloo with only a
+        Master’s degree, although the minimum requirement for a Faculty Lecturer is typically a PhD. Student feedback
+        frequently highlights dedication to students, clarity of teaching style, fairness, and supportive instruction.
+        Reference letters from teaching staff and administrators are available upon request. Selected teaching materials
+        can also be provided.
+      </p>
+
+      <p class="foot">
+        Contact: <a href="mailto:rkharal@uwaterloo.ca">rkharal@uwaterloo.ca</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
