@@ -1,0 +1,520 @@
+<!-- curriculumnvitae.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum Vitae | Rosina Kharal</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --max: 1100px;
+      --bd: rgba(255,255,255,0.18);
+      --bg: rgba(255,255,255,0.06);
+      --bg2: rgba(255,255,255,0.09);
+      --muted: rgba(255,255,255,0.90);
+    }
+
+    body{ font-family: "Kumbh Sans", sans-serif; }
+
+    .page{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 16px 70px;
+    }
+
+    .hero{
+      margin-top: 18px;
+      border: 1px solid var(--bd);
+      background: var(--bg);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .hero__top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .name{
+      margin:0;
+      font-size: 2rem;
+      letter-spacing: .5px;
+    }
+
+    .loc{
+      margin:0;
+      font-weight:700;
+      opacity:.9;
+      white-space:nowrap;
+    }
+
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 10px;
+    }
+
+    .pill{
+      display:inline-block;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .pill:hover{
+      border-color: rgba(255,255,255,0.40);
+      background: rgba(0,0,0,0.18);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (min-width: 980px){
+      .grid{ grid-template-columns: 320px 1fr; }
+      .sticky{ position: sticky; top: 18px; }
+    }
+
+    .card{
+      border: 1px solid var(--bd);
+      background: var(--bg);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .nav a{
+      display:block;
+      margin-top: 8px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .nav a:hover{
+      border-color: rgba(255,255,255,0.30);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .section{
+      border: 1px solid var(--bd);
+      background: var(--bg);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .section + .section{ margin-top: 16px; }
+
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+    }
+
+    .item{
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+    .item:first-of-type{ border-top: 0; padding-top: 0; margin-top: 0; }
+
+    .head{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px 12px;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .title{
+      margin:0;
+      font-size: 1.05rem;
+      font-weight:700;
+    }
+
+    .meta{
+      margin:0;
+      font-weight:700;
+      opacity:.9;
+      white-space:nowrap;
+    }
+
+    .sub{
+      margin:0;
+      opacity:.92;
+      line-height:1.5;
+      color: var(--muted);
+    }
+
+    ul{
+      margin: 8px 0 0 18px;
+      padding:0;
+      line-height: 1.55;
+      color: var(--muted);
+      opacity: .95;
+    }
+    li{ margin: 6px 0; }
+
+    .foot{
+      margin-top: 10px;
+      opacity: .9;
+      line-height: 1.5;
+    }
+
+    @media print{
+      nav.navbar{ display:none !important; }
+      body{ background:#fff !important; color:#000 !important; }
+      a{ color:#000 !important; text-decoration: underline !important; }
+      .page{ max-width: 100% !important; padding: 0 !important; }
+      .hero, .card, .section{ background:#fff !important; border: 1px solid #ccc !important; }
+      .grid{ grid-template-columns: 1fr !important; }
+      .sticky{ position: static !important; }
+      .pill{ display:none !important; }
+      .pill.print{ display:inline-block !important; border: 1px solid #000 !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">Home</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="/Education.html" class="navbar__links">Education</a></li>
+        <li class="navbar__item"><a href="/Work.html" class="navbar__links">Work Experience</a></li>
+        <li class="navbar__item"><a href="/Volunteer.html" class="navbar__links">Volunteer Work</a></li>
+        <li class="navbar__item"><a href="/pub.html" class="navbar__links">Publications</a></li>
+        <li class="navbar__item"><a href="/Teaching.html" class="navbar__links">Teaching</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero" aria-label="CV header">
+      <div class="hero__top">
+        <h1 class="name">Rosina Kharal</h1>
+        <p class="loc">Waterloo, ON</p>
+      </div>
+
+      <div class="links" aria-label="contact links">
+        <a class="pill" href="https://rkharal.github.io/" target="_blank" rel="noopener noreferrer">rkharal.github.io</a>
+        <a class="pill" href="mailto:rkharal@uwaterloo.ca">rkharal@uwaterloo.ca</a>
+        <a class="pill print" href="#" onclick="window.print(); return false;">Print / Save PDF</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <aside class="sticky">
+        <section class="card">
+          <h2 style="margin:0 0 10px;">Sections</h2>
+          <nav class="nav">
+            <a href="#highlights">Highlights</a>
+            <a href="#education">Education</a>
+            <a href="#service">Program Committees & Service</a>
+            <a href="#seminars">Seminars & Presentations</a>
+            <a href="#teaching">Teaching Experience</a>
+            <a href="#professional">Professional Experience</a>
+            <a href="#leadership">Leadership & Extracurricular</a>
+            <a href="#community">Community & Non-Technical</a>
+          </nav>
+          <p class="foot">
+            Tip: click “Print / Save PDF” to export a clickable PDF.
+          </p>
+        </section>
+      </aside>
+
+      <section aria-label="CV content">
+        <section class="section" id="highlights">
+          <h2>Highlights</h2>
+          <ul>
+            <li><strong>Computer Science Teaching (University of Waterloo):</strong> Faculty Lecturer (2006–2008, 2012–2021); taught core undergraduate CS courses and led end-to-end delivery (lectures, content, assignments, exams, office hours, grading) at scale.</li>
+            <li><strong>Online Leadership &amp; Course Operations:</strong> Leadership in course online management (LEARN/D2L) and cross-university seminars/workshops supporting fully online delivery (Winter 2020–Spring 2021).</li>
+            <li><strong>Multicore Computing / CPU–GPU Systems Research:</strong> GPU-accelerated data structures/indexing; kernel-level performance investigations (profiling, memory access patterns, cooperative groups, occupancy, contention reduction).</li>
+            <li><strong>Deep Learning / ML:</strong> adversarial robustness and corruption resilience in 2D/3D vision; large experimental pipelines and analysis; PC member and reviewer service (ICMLA; reviewer for BMVC).</li>
+            <li><strong>Selected Awards:</strong> Ontario Graduate Scholarship (2022–2026); President’s Graduate Scholarship (2022–2026); Matching Award (Mathematics) (2022–2026); Sharon &amp; David Johnston Award (2023–2024).</li>
+          </ul>
+        </section>
+
+        <section class="section" id="education">
+          <h2>Education</h2>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">University of Waterloo — PhD (in progress), Computer Science</p>
+              <p class="meta">2020 – 2025</p>
+            </div>
+            <p class="sub">
+              Supervisors:
+              <a href="https://www.cs.utoronto.ca/~tabrown/" target="_blank" rel="noopener noreferrer">Trevor Brown</a> and
+              <a href="https://plg.uwaterloo.ca/~pabuhr/" target="_blank" rel="noopener noreferrer">Peter Buhr</a>.
+            </p>
+            <ul>
+              <li>Completed four full-time years as a PhD student.</li>
+              <li><strong>Recent research activities (2024–2025):</strong> supervised nine research interns; submitted a survey to Elsevier <em>Journal of Parallel and Distributed Computing</em> on RTX hardware acceleration in non-graphical domains (June 2025); led large-scale GPU benchmarking and analysis; kernel profiling, memory-access analysis, occupancy tuning, and contention reduction; collaboration with University of Mainz; adversarial robustness in ML vision classification; reviewer/PC service.</li>
+              <li><strong>Experimental stack:</strong> CUDA, OptiX, C, C++, PyTorch3D.</li>
+              <li><strong>Awards:</strong> OGS (2022–2026); President’s Graduate Scholarship (2022–2026); Matching Award: Mathematics (2022–2026); Sharon &amp; David Johnston Award (2023–2024); Math Domestic Graduate Student Award (2022).</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">University of Waterloo — Master’s in Mathematics (Computer Science, Bioinformatics)</p>
+              <p class="meta">2004 – 2006</p>
+            </div>
+            <ul>
+              <li>
+                Thesis:
+                <a href="https://uwspace.uwaterloo.ca/items/a3f31fa1-0b21-48b6-8101-7e6e79e6c2ac" target="_blank" rel="noopener noreferrer">
+                  Semidefinite Embedding for the Dimensionality Reduction of DNA Microarray Data
+                </a>
+                (published).
+              </li>
+              <li>Algorithms for high-dimensional data: Spectral Embedding, Isomap, LLE, PCA, Semidefinite Embedding.</li>
+              <li>Introduced KAS: Kernel Alignment with Semidefinite Embedding.</li>
+              <li>Graduated with Honours; posters/presentations in Health Informatics, Algorithms &amp; Complexity, and AI.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">University of Waterloo — B.Sc. Honours: CS / EE Option; Minor in Physics</p>
+              <p class="meta">1997 – 2002</p>
+            </div>
+            <ul>
+              <li>
+                Undergraduate research assistant (URA): Computer Networks
+                (<a href="https://rboutaba.cs.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">Prof. Raouf Boutaba</a>, CS);
+                Bluetooth integration in IoT
+                (<a href="https://uwaterloo.ca/advanced-manufacturing-research/profile/safavi" target="_blank" rel="noopener noreferrer">Prof. Safavi–Naeini</a>, Engineering).
+              </li>
+              <li>Additional interests: Physics, Chemistry, Computer Engineering.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Publications removed as requested -->
+
+        <section class="section" id="service">
+          <h2>Program Committees &amp; Conference Service</h2>
+          <ul>
+            <li>Program Committee &amp; Reviewer: IEEE ICMLA 2023–2025 (PC: 2024–2025; Reviewer: 2023–2025); Reviewer: BMVC 2023, 2025.</li>
+            <li>Session Chair: ICMLA 2023 (Deep Learning; Transformers Session).</li>
+          </ul>
+        </section>
+
+        <section class="section" id="seminars">
+          <h2>Seminars &amp; Presentations (2021–2024)</h2>
+          <ul>
+            <li><a href="https://vault.cs.uwaterloo.ca/s/BrGBDBtyTBYXgqY" target="_blank" rel="noopener noreferrer">Hardware-accelerated Ray Tracing Cores in Non-Graphical Domains (RTX on GPUs)</a></li>
+            <li><a href="https://vault.cs.uwaterloo.ca/s/qG3322KGfxSj9ze" target="_blank" rel="noopener noreferrer">Mobile security vulnerabilities of Online Application Generators (OAGs)</a></li>
+            <li>High Performance Computing (HPC); GPUs for general purpose processing.</li>
+            <li>VC Classes are Adversarially Robustly Learnable, But Only Improperly.</li>
+            <li>Dangerous Skills: Virtual Personal Assistant Systems.</li>
+            <li>IoTGuard: Dynamic Enforcement of Security and Safety.</li>
+            <li>Remote Infections on Mobile WebViews.</li>
+            <li>Harmonia: A High Throughput B+ Tree for GPUs.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="teaching">
+          <h2>Teaching Experience</h2>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">University of Waterloo — Faculty Lecturer (Department of Computer Science)</p>
+              <p class="meta">2006–2008, 2012–2021</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li><strong>CS251</strong> Computer Organization &amp; Design: course leadership and delivery at scale; ARM/MIPS, microprocessor design, memory hierarchies, virtual memory, caches, RISC vs CISC; LEARN/D2L course operations and content updates.</li>
+              <li>Taught three terms per academic year; ~400–500 students/year during the final five years of teaching.</li>
+              <li>Owned end-to-end delivery: lectures, assignments, labs, exams, office hours, grading workflows, and term logistics.</li>
+              <li>Migrated CS251 to fully online delivery (Winter 2020–Spring 2021) with structured assessment workflows.</li>
+              <li>Delivered seminars/workshops supporting faculty in online delivery; recorded talk:
+                <a href="https://www.youtube.com/watch?v=UwjTtxcvaI0" target="_blank" rel="noopener noreferrer">
+                  Improving Academic Integrity with Scheduled, Timed-Interval Exams
+                </a>.
+              </li>
+              <li><strong>Other courses:</strong> CS136, CS135, CS115, CS116, CS100 (C++, C#, Racket; intro programming, algorithms/data structures, functional programming).</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="professional">
+          <h2>Professional Experience</h2>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">University of Waterloo — Centre for Teaching Excellence (Engineering Faculty Liaison)</p>
+              <p class="meta">2006 – 2008</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li>Partnered with Engineering faculty to adopt innovative teaching practices.</li>
+              <li>Managed new faculty LEARN workshops and teaching seminars.</li>
+              <li>Led seminars on effective pedagogy and course design.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">XLTEK Corporation — Software Engineer</p>
+              <p class="meta">2001 – 2003</p>
+            </div>
+            <p class="sub">Oakville, Ontario</p>
+            <ul>
+              <li>Medical devices for operating rooms and ICUs (e.g., Johns Hopkins Hospital).</li>
+              <li>Developed patient operating monitor software interfacing with I/O peripherals; focus on HW/SW boundary.</li>
+              <li><strong>Languages:</strong> C++ and DSL assembly.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">General Motors Defense Division — Research &amp; Development</p>
+              <p class="meta">2000 – 2001</p>
+            </div>
+            <p class="sub">London, Ontario</p>
+            <ul>
+              <li>Designed test suites and coordinated field tests for military vehicles.</li>
+              <li>Built LAV simulator tools to exercise vehicles under varied terrains (LAVSim).</li>
+              <li>R&amp;D for future simulation software.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">Q-Junction — Software Development Team Lead</p>
+              <p class="meta">1999 – 2000</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li>Led startup engineering team; delivered online shopping tool and secured VC funding.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">John Crane Canada — Software–Hardware Developer</p>
+              <p class="meta">1998 – 1999</p>
+            </div>
+            <p class="sub">Stoney Creek, Ontario</p>
+            <ul>
+              <li>First in-house programmer; automated workflow, manufacturing, ordering, and distribution systems; platform maintenance across units.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="leadership">
+          <h2>Leadership &amp; Extracurricular</h2>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">CS Graduate Students' Association, University of Waterloo — Board Member</p>
+              <p class="meta">2023 – 2024</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li>Organized team building, mental health, and well-being events each term.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">FLIGHT Summer STEM Program (WiCS) — Instructor / Mentor</p>
+              <p class="meta">2023</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li>Two-week program for high school girls implementing a UN sustainable development project; lectures, workshops, seminars.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">FUSION Business–Tech Competition — Panel Judge</p>
+              <p class="meta">2022</p>
+            </div>
+            <p class="sub">Waterloo, Ontario</p>
+            <ul>
+              <li>Evaluated projects in SciTech, FinTech, and Entrepreneurship (Faculties of Science and Business).</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">Reading Group, Multicore Computing Lab</p>
+              <p class="meta">2022</p>
+            </div>
+            <p class="sub">
+              <a href="https://gitlab.com/trbot86/multicore_lab_wiki/-/wikis/Fall-2022-Biweekly-Reading-Group" target="_blank" rel="noopener noreferrer">
+                Fall 2022 Biweekly Reading Group (link)
+              </a>
+            </p>
+          </article>
+
+          <article class="item">
+            <div class="head">
+              <p class="title">Memberships</p>
+              <p class="meta"></p>
+            </div>
+            <ul>
+              <li>Digital Research Alliance of Canada (HPC).</li>
+              <li>CS–Can / Info–Can (National CS Academic Community).</li>
+              <li>Association for Women in Mathematics.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="community">
+          <h2>Community &amp; Non-Technical Experience</h2>
+          <ul>
+            <li>KW Neighbourhood Food Share Program — Lead Coordinator, Meal Share (Mar 2025)</li>
+            <li>Mental Health &amp; Addiction Seminar — Guest Speaker, Family Centre of Kitchener–Waterloo (2025)</li>
+            <li>Mental Health &amp; Addiction Support Group — Session Coordinator; Workshop Speaker (Jan 2025)</li>
+            <li>St. John’s Soup Kitchen — Lead Coordinator, annual community meal service (2005–2021)</li>
+            <li>Victoria Street Tent Community — Meal/Donations Coordination (2021–2022)</li>
+            <li>Ray of Hope Addiction Treatment Centre — Senior Coordinator (monthly meal service) (2021–2023)</li>
+            <li>Muslim Social Services — Board of Directors; Ramadan community food drive (2015–2017)</li>
+            <li>Charles Street Men’s Hostel — Lead coordinator, annual meal service (2016–2021)</li>
+            <li>oneROOF Youth Services — Lead coordinator, annual meal service (2022)</li>
+            <li>Salvation Army Addiction Treatment Centre — Donations collection &amp; delivery (2022)</li>
+            <li>CMW: Coalition of Muslim Women — Parent volunteer, youth addiction services (2021)</li>
+            <li>MAC Maple Grove School — Parent volunteer, event coordination; Board (2012–2016) (2011–2015)</li>
+            <li>TES Elementary School — Parent volunteer, event coordination (2020–2023)</li>
+          </ul>
+
+          <p class="foot">
+            <em>References available upon request.</em> Contact:
+            <a href="mailto:rkharal@uwaterloo.ca">rkharal@uwaterloo.ca</a>.
+          </p>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
