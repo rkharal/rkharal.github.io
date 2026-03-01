@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Website</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="/" id="navbar__logo">Home</a>
-      <div class="navbar__toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="/Education.html" class="navbar__links">Education</a>
-        </li>
-        <li class="navbar__item">
-          <a href="/Work.html" class="navbar__links">Work Experience</a>
-        </li>
-        <li class="navbar__item">
-          <a href="/Volunteer.html" class="navbar__links">Volunteer Work</a>
-        </li>
-        <li class="navbar__item">
-          <a href="/pub.html" class="navbar__links">Publications</a>
-        </li>
-        <li class="navbar__item">
-          <a href="/Teaching.html" class="navbar__links">Teaching</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="main">
-    <div class="main__container">
-      <div class="main__content">
-        <h1>RKHARAL GITHUB</h1>
-        <p>On this website you can view my education, work experience, volunteer work and my publications</p>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<!-- Replace ONLY the navbar__menu list with this updated one (adds Research Summary after Teaching) -->
+<ul class="navbar__menu">
+  <li class="navbar__item">
+    <a href="/Education.html" class="navbar__links">Education</a>
+  </li>
+  <li class="navbar__item">
+    <a href="/Work.html" class="navbar__links">Work Experience</a>
+  </li>
+  <li class="navbar__item">
+    <a href="/Volunteer.html" class="navbar__links">Volunteer Work</a>
+  </li>
+  <li class="navbar__item">
+    <a href="/pub.html" class="navbar__links">Publications</a>
+  </li>
+  <li class="navbar__item">
+    <a href="/Teaching.html" class="navbar__links">Teaching</a>
+  </li>
+ <!-- Replace ONLY the Research Summary nav item with this (opens Google Drive PDF in a new tab) -->
+<li class="navbar__item">
+  <a href="https://drive.google.com/file/d/1Yk9Ma5B7tF6N2knUZvbMB8L_wsIcdG68/view?usp=drive_link"
+     class="navbar__links"
+     target="_blank" rel="noopener noreferrer">
+    Research Summary
+  </a>
+</li>
+</ul>

@@ -1,4 +1,4 @@
-<!-- pub.html -->
+<!-- pub.html (updated: adds Master's Thesis card at the very top) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,141 +8,34 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Minimal page-only styling (keeps your existing site look). */
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-      font-family: "Kumbh Sans", sans-serif;
-    }
+    .page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; font-family: "Kumbh Sans", sans-serif; }
+    .page__title { margin: 24px 0 8px; font-size: 2rem; }
+    .page__subtitle { margin: 0 0 24px; opacity: 0.9; line-height: 1.5; }
 
-    .page__title {
-      margin: 24px 0 8px;
-      font-size: 2rem;
-    }
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 28px; }
+    .chip { border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.06); padding: 8px 12px; border-radius: 999px; cursor: pointer; user-select: none; font-weight: 700; font-size: 0.95rem; }
+    .chip[aria-pressed="true"] { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.45); }
 
-    .page__subtitle {
-      margin: 0 0 24px;
-      opacity: 0.9;
-      line-height: 1.5;
-    }
+    .section { margin-top: 28px; }
+    .section__title { margin: 0 0 14px; font-size: 1.35rem; }
 
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 18px 0 28px;
-    }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
 
-    .chip {
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.06);
-      padding: 8px 12px;
-      border-radius: 999px;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
+    .card { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); border-radius: 14px; padding: 14px 14px 12px; transition: transform 120ms ease, background 120ms ease, border-color 120ms ease; }
+    .card:hover { transform: translateY(-2px); background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.28); }
 
-    .chip[aria-pressed="true"] {
-      background: rgba(255,255,255,0.18);
-      border-color: rgba(255,255,255,0.45);
-    }
+    .card__top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.06); white-space: nowrap; }
 
-    .section {
-      margin-top: 28px;
-    }
+    .meta { opacity: 0.9; font-size: 0.95rem; margin: 0 0 10px; line-height: 1.35; }
+    .title { margin: 0 0 10px; font-size: 1.05rem; line-height: 1.35; }
 
-    .section__title {
-      margin: 0 0 14px;
-      font-size: 1.35rem;
-    }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .linkbtn { display: inline-block; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.22); background: rgba(0,0,0,0.10); text-decoration: none; font-weight: 700; font-size: 0.92rem; }
+    .linkbtn:hover { border-color: rgba(255,255,255,0.40); background: rgba(0,0,0,0.18); }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 14px;
-    }
-
-    .card {
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 14px 14px 12px;
-      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(255,255,255,0.28);
-    }
-
-    .card__top {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.06);
-      white-space: nowrap;
-    }
-
-    .meta {
-      opacity: 0.9;
-      font-size: 0.95rem;
-      margin: 0 0 10px;
-      line-height: 1.35;
-    }
-
-    .title {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      line-height: 1.35;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .linkbtn {
-      display: inline-block;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.10);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    .linkbtn:hover {
-      border-color: rgba(255,255,255,0.40);
-      background: rgba(0,0,0,0.18);
-    }
-
-    .note {
-      margin-top: 12px;
-      opacity: 0.9;
-      line-height: 1.5;
-    }
-
-    .hidden {
-      display: none !important;
-    }
+    .note { margin-top: 12px; opacity: 0.9; line-height: 1.5; }
+    .hidden { display: none !important; }
   </style>
 </head>
 
@@ -172,6 +65,36 @@
     <p class="page__subtitle">
       Primary: GPU-accelerated data structures & indexing. Secondary: adversarial robustness and corruption resilience in 2D/3D vision.
     </p>
+
+    <!-- ADDED: Master's Thesis at the top -->
+    <section class="section" aria-labelledby="thesis">
+      <h2 class="section__title" id="thesis">Master’s Thesis</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__top">
+            <span class="badge">Thesis</span>
+            <span class="badge">Published</span>
+          </div>
+
+          <p class="meta">
+            University of Waterloo — Master’s in Mathematics (Computer Science, Bioinformatics) (2004–2006)
+          </p>
+
+          <h3 class="title">
+            <a href="https://uwspace.uwaterloo.ca/items/a3f31fa1-0b21-48b6-8101-7e6e79e6c2ac" target="_blank" rel="noopener noreferrer">
+              Semidefinite Embedding for the Dimensionality Reduction of DNA Microarray Data
+            </a>
+          </h3>
+
+          <div class="links">
+            <a class="linkbtn" href="https://uwspace.uwaterloo.ca/items/a3f31fa1-0b21-48b6-8101-7e6e79e6c2ac" target="_blank" rel="noopener noreferrer">
+              UW Space (Thesis)
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <div class="filters" role="group" aria-label="Filter publications by year">
       <button class="chip" type="button" data-year="all" aria-pressed="true">All</button>

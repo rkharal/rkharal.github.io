@@ -1,4 +1,4 @@
-<!-- Volunteer.html -->
+<!-- Volunteer.html (updated: 2 sections + added Leadership/Extracurricular) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +49,11 @@
       background: rgba(255, 255, 255, 0.06);
       border-radius: 16px;
       padding: 16px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
     }
 
     .cards {
@@ -108,6 +113,32 @@
       line-height: 1.35;
     }
 
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+      line-height: 1.55;
+      opacity: 0.92;
+    }
+
+    li { margin: 6px 0; }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      background: rgba(0, 0, 0, 0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      opacity: 0.95;
+    }
+
     .foot {
       margin-top: 14px;
       opacity: 0.9;
@@ -146,12 +177,104 @@
       </a>
     </div>
 
-    <h1>Community &amp; Non-Technical Experience</h1>
+    <h1>Volunteer Work</h1>
     <p class="subtitle">
-      Volunteer leadership, coordination, and community service (Kitchener–Waterloo and beyond).
+      Leadership, mentorship, and community service in technical and non-technical settings.
     </p>
 
-    <section class="section">
+    <!-- Technical Volunteer Experience -->
+    <section class="section" id="technical">
+      <h2>Technical Volunteer Experience</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <p class="org">CS Graduate Students' Association, University of Waterloo</p>
+            <p class="date">2023 – 2024</p>
+          </div>
+          <p class="role">Board Member</p>
+          <p class="loc">Waterloo, Ontario</p>
+          <ul>
+            <li>Organized team building, mental health, and well-being events each term.</li>
+          </ul>
+          <div class="tagrow">
+            <span class="tag">Leadership</span>
+            <span class="tag">Student community</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <p class="org">FLIGHT Summer STEM Program (WiCS)</p>
+            <p class="date">2023</p>
+          </div>
+          <p class="role">Instructor / Mentor</p>
+          <p class="loc">Waterloo, Ontario</p>
+          <ul>
+            <li>Two-week program for high school girls implementing a UN sustainable development project; lectures, workshops, seminars.</li>
+          </ul>
+          <div class="tagrow">
+            <span class="tag">Mentorship</span>
+            <span class="tag">STEM outreach</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <p class="org">FUSION Business–Tech Competition</p>
+            <p class="date">2022</p>
+          </div>
+          <p class="role">Panel Judge</p>
+          <p class="loc">Waterloo, Ontario</p>
+          <ul>
+            <li>Evaluated projects in SciTech, FinTech, and Entrepreneurship (Faculties of Science and Business).</li>
+          </ul>
+          <div class="tagrow">
+            <span class="tag">Judging</span>
+            <span class="tag">Entrepreneurship</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <p class="org">
+              <a href="https://gitlab.com/trbot86/multicore_lab_wiki/-/wikis/Fall-2022-Biweekly-Reading-Group"
+                 target="_blank" rel="noopener noreferrer">
+                Reading Group, Multicore Computing Lab
+              </a>
+            </p>
+            <p class="date">2022</p>
+          </div>
+          <p class="role">Participant</p>
+          <p class="loc">Waterloo, Ontario</p>
+          <div class="tagrow">
+            <span class="tag">HPC</span>
+            <span class="tag">Research reading group</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <p class="org">Memberships</p>
+            <p class="date"></p>
+          </div>
+          <ul>
+            <li>Digital Research Alliance of Canada (HPC).</li>
+            <li>CS–Can / Info–Can (National CS Academic Community).</li>
+            <li>Association for Women in Mathematics.</li>
+          </ul>
+          <div class="tagrow">
+            <span class="tag">HPC</span>
+            <span class="tag">Academic community</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Non-Technical Community Work -->
+    <section class="section" id="community">
+      <h2>Non-Technical Community Work</h2>
+
       <div class="cards">
         <article class="card">
           <div class="card__head">
