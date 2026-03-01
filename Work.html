@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Page-only styling to make Work.html look clean without needing CSS refactors */
     .page {
       max-width: 1100px;
       margin: 0 auto;
@@ -38,6 +37,15 @@
     .pill:hover {
       border-color: rgba(255,255,255,0.40);
       background: rgba(0,0,0,0.18);
+    }
+
+    /* More obvious primary CV button */
+    .pill--primary{
+      border-color: rgba(255,255,255,0.40);
+      background: rgba(255,255,255,0.12);
+    }
+    .pill--primary:hover{
+      background: rgba(255,255,255,0.18);
     }
 
     h1 { margin: 10px 0 8px; font-size: 2rem; }
@@ -127,23 +135,6 @@
       font-size: 0.85rem;
       opacity: 0.95;
     }
-
-    .linkbtn {
-      display: inline-block;
-      margin-top: 10px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(0,0,0,0.10);
-      padding: 8px 10px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    .linkbtn:hover {
-      border-color: rgba(255,255,255,0.40);
-      background: rgba(0,0,0,0.18);
-    }
   </style>
 </head>
 
@@ -171,8 +162,13 @@
   <main class="page">
     <!-- CV link right at the top -->
     <div class="toplink">
-      <a class="pill" href="/CurriculumnVitae.html">View Full CV (HTML)</a>
-      <!-- If you later upload a PDF, just uncomment this and set the filename -->
+      <!-- Absolute path (works when deployed at site root) -->
+      <a class="pill pill--primary" href="/CurriculumnVitae.html">Curriculum Vitae (HTML)</a>
+
+      <!-- Relative fallback (works if your site is hosted under a subpath) -->
+      <a class="pill" href="CurriculumnVitae.html">CV (fallback link)</a>
+
+      <!-- Optional PDF later -->
       <!-- <a class="pill" href="/CurriculumnVitae.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a> -->
     </div>
 
@@ -181,7 +177,6 @@
       A snapshot of professional roles, teaching leadership, and systems/software experience.
     </p>
 
-    <!-- Teaching (expanded) -->
     <section class="section" id="teaching">
       <h2>Teaching Experience</h2>
 
@@ -218,7 +213,6 @@
       </div>
     </section>
 
-    <!-- Professional Experience -->
     <section class="section" id="professional">
       <h2>Professional Experience</h2>
 
